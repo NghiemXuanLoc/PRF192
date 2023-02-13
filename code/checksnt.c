@@ -28,6 +28,7 @@ int main(){
 			printf("%d ", i + 1);
 		}
 	}
+	
 	printf("\nco tat ca %d so nguyen to trong mang", cnt);
 
 	return 0;
