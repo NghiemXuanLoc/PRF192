@@ -29,7 +29,7 @@ int main()
             printf("Enter the value n > 0\n");
         }
     } while (n < 0);
-    
+
     ll kq = giaithua(n);
     printf("n! = %lld\n", kq);
     return 0;

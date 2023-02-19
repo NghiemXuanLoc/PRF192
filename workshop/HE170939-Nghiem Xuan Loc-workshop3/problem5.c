@@ -11,7 +11,7 @@ ll fibo(int n)
 {
     ll t1 = 1, t2 = 1, f = 1;
     // t2 la so dung truoc, t1 la so dung sau
-    
+
     for (int i = 3; i <= n; i++)
     {
         f = t1 + t2;
