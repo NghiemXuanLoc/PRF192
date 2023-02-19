@@ -7,7 +7,7 @@
 const int mod = 1e9 + 7;
 typedef long long ll;
 
-int prime(int n)
+int prime(ll n)
 {
     for (int i = 2; i <= sqrt(n); i++)
     {
@@ -21,19 +21,19 @@ int prime(int n)
 
 int main()
 {
-    int n;
+    ll n;
     do
     {
-        printf("nhap so nguyen n: ");
-        scanf("%d", &n);
+        printf("enter the value of n: ");
+        scanf("%lld", &n);
         if (n < 2)
         {
-            printf("nhap gia tri n >= 2\n");
+            printf("enter the value of n >= 2\n");
         }
 
     } while (n < 2);
 
-    printf("cac so nguyen to tu 2 toi n: ");
+    printf("prime numbers from 2 to n: ");
     for (int i = 2; i <= n; i++)
     {
         if (prime(i))

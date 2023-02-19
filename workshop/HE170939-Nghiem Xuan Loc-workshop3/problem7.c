@@ -7,7 +7,7 @@
 const int mod = 1e9 + 7;
 typedef long long ll;
 
-int sum(int n)
+int sum(ll n)
 {
     int temp = 0;
     int s = 0;
@@ -20,17 +20,17 @@ int sum(int n)
 }
 int main()
 {
-    int n;
+    ll n;
     do
     {
-        printf("nhap gia tri cua n: ");
-        scanf("%d", &n);
+        printf("enter the value of n: ");
+        scanf("%lld", &n);
         if (n >= 0)
         {
-            printf("tong cac chu so cua n = %d\n", sum(n));
+            printf("sum of digits of n = %d\n", sum(n));
         }
         else
-            printf("gia tri nhap vao khong hop le(n >= 0)\n");
+            printf("Invalid input value(n >= 0)\n");
 
     } while (n >= 0);
 

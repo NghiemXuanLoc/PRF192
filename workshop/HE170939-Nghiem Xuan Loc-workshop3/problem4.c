@@ -22,11 +22,11 @@ int main()
     int n;
     do
     {
-        printf("nhap vao n: ");
+        printf("Enter the value n: ");
         scanf("%d", &n);
         if (n < 0)
         {
-            printf("nhap vao gia tri n >= 0\n");
+            printf("Enter the value n > 0\n");
         }
     } while (n < 0);
     

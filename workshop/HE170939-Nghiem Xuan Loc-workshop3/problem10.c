@@ -23,7 +23,7 @@ void mimax(int n)
         }
         n /= 10;
     }
-    printf("chu so nho nhat cua n = %d\nchu so lon nhat cua n = %d\n", min_val, max_val);
+    printf("smallest digit of n = %d\nlargest digit of n = %d\n", min_val, max_val);
 }
 
 int main()
@@ -31,11 +31,11 @@ int main()
     int n;
     do
     {
-        printf("nhap vao gia tri cua n: ");
+        printf("enter the value of n: ");
         scanf("%d", &n);
         if (n < 0)
         {
-            printf("gia tri nhap vao khong hop le(n >= 0)\n");
+            printf("Invalid input value(n >= 0)\n");
         }
 
     } while (n < 0);

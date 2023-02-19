@@ -27,14 +27,14 @@ int main()
     int n;
     do
     {
-        printf("nhap vao n: ");
+        printf("Enter the value n: ");
         scanf("%d", &n);
         if (n < 1)
         {
-            printf("nhap vao gia tri n >= 1\n");
+            printf("Enter the value n >= 1\n");
         }
 
     } while (n < 1);
-    printf("so fibonacci thu n = %lld\n", fibo(n));
+    printf("nth Fibonacci number = %lld\n", fibo(n));
     return 0;
 }

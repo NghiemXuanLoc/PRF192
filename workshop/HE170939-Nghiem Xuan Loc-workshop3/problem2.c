@@ -7,39 +7,43 @@
 const int mod = 1e9 + 7;
 typedef long long ll;
 
-int check(int d, int m, int y)
+int checkLeapYear(int n)
 {
-    int maxd = 31;
-    if (d < 1 || d > 31 || m < 1 || m > 12)
-    {
-        return 0;
-    }
-    if (m == 4 || m == 6 || m == 9 || m == 11)
-    {
-        maxd = 30;
-    }
-    if (m == 2)
-    {
-        if (y % 400 == 0 || (y % 4 == 0 && y % 100 != 0))
-        {
-            maxd = 29;
-        }
-        else
-            maxd = 28;
-    }
-    return d <= maxd;
+	if (n % 400 == 0 || (n % 4 == 0 && n % 100 != 0))
+		return 1;
+	return 0;
+}
+
+int checkDate(int d, int m, int y)
+{
+	if (m >= 1 && m <= 12 && y > 0)
+	{
+		if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
+		{
+			return d <= 31;
+		}
+		else if (m == 4 || m == 6 || m == 9 || m == 11)
+		{
+			return d <= 30;
+		}
+		else if (checkLeapYear(y))
+			return d <= 29;
+		else
+			return d <= 28;
+	}
+	return 0;
 }
 int main()
 {
-    int d, m, y;
-    printf("nhap vao tu ban phim du lieu cua 1 ngay: ");
-    scanf("%d%d%d", &d, &m, &y);
-    if (check(d, m, y))
-    {
-        printf("valid date\n");
-    }
-    else
-        printf("invalid date\n");
+	int d, m, y;
+	printf("Enter from the keyboard 1 day's data: ");
+	scanf("%d%d%d", &d, &m, &y);
+	if (checkDate(d, m, y))
+	{
+		printf("valid date\n");
+	}
+	else
+		printf("invalid date\n");
 
-    return 0;
+	return 0;
 }

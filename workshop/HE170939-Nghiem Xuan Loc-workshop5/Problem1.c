@@ -15,6 +15,7 @@ int main(){
 	do{
 		printf("input from the total keyboard = ");
 		scanf("%d", &total);
+		if(total < 2 || total > 12) printf("Invalid number entered(2 <= total <= 12)\n");
 	}while(total < 2 || total > 12);
 	
 	printf("Dice Thrower\n============\ntotal sought : %d\n", total);

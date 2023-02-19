@@ -7,9 +7,9 @@
 const int mod = 1e9 + 7;
 typedef long long ll;
 
-int check(int n)
+int check(ll n)
 {
-    int t2 = 1, t1 = 1, f = 1;
+    ll t2 = 1, t1 = 1, f = 1;
     while (f < n)
     {
         f = t2 + t1;
@@ -21,14 +21,14 @@ int check(int n)
 
 int main()
 {
-    int n;
+    ll n;
     do
     {
-        printf("nhap vao gia tri n: ");
-        scanf("%d", &n);
+        printf("enter the value n: ");
+        scanf("%lld", &n);
         if (n < 1)
         {
-            printf("gia tri nhap vao khong hop le(n >= 1)\n");
+            printf("Invalid input value(n >= 1)\n");
         }
 
     } while (n < 1);
