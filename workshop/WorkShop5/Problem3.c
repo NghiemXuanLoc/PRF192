@@ -55,7 +55,7 @@ void printascii()
     }
     for (int i = b; i >= a; i--)
     {
-        printf("%c: %d\n", (char)i, i);
+        printf("%c: %d, %xh\n", (char)i, i, i);
     }
     printf("\n");
 }
