@@ -129,7 +129,9 @@ int is_strcmp(char a[], char b[]){
 //char* strcpy(char c[], char d[]) copy xau d vao xau c
 //char* strcat(char c[], char d[]) noi 2 xau vao voi nhau
 // char* strdup copy chuoi hien tai sang 1 chuoi moi
+// char* strstr(char a[], char b[]) kiem tra xau b co phai la con cua xau a khong
 
+//menset(a, 0, sizeof(a)); khoi tao tat ca gia tri mang a co gia tri la 0
 
 int main(){
 	char a[100] = "abcde";
