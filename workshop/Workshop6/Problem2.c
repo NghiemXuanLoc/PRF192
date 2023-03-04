@@ -11,7 +11,7 @@ typedef long long ll;
 void addValue(int a[], int *n)
 {
 	int temp;
-	printf("Enter the value you want to add to the array: ");
+	printf("\nEnter the value you want to add to the array: ");
 	scanf("%d", &temp);
 	printf("\n\n");
 	a[*n] = temp;
@@ -21,7 +21,7 @@ void addValue(int a[], int *n)
 // tim kiem 1 phan tu trong mang
 void searchValue(int a[], int n)
 {
-	printf("Enter the value you want to search on the screen: ");
+	printf("\nEnter the value you want to search on the screen: ");
 	int x, temp = 0;
 	scanf("%d", &x);
 	for (int i = 0; i < n; i++)
@@ -48,9 +48,10 @@ void printArray(int a[], int n)
 	printf("\n\n");
 }
 
+// im gia tri trong pham phi cho truoc
 void printRange(int a[], int n)
 {
-	printf("input 2 values min_val and max_val: ");
+	printf("\ninput 2 values min_val and max_val: ");
 	int min_val, max_val;
 	scanf("%d%d", &min_val, &max_val);
 	printf("\n");
@@ -71,6 +72,7 @@ int cmp(const void *a, const void *b)
 // in mang theo thu tu tang dan, giu nguyen vi tri ban dau;
 void arrayOder(int a[], int n)
 {
+	printf("\n");
 	int b[n];
 	for (int i = 0; i < n; i++)
 	{
@@ -87,7 +89,7 @@ int main()
 {
 	int a[105];
 	int n = 0;
-	char x;
+	int x;
 	do
 	{
 		printf("-----------------\n");
@@ -100,27 +102,31 @@ int main()
 		printf("5- Print out the array in ascending order\n");
 		printf("Others-Quit\n\n");
 		printf("enter your selection: ");
-		scanf("%c", &x);
+		scanf("%d", &x);
 		switch (x)
 		{
-		case '1':
+		case 1:
 			addValue(a, &n);
 			break;
-		case '2':
+		case 2:
 			searchValue(a, n);
 			break;
-		case '3':
+		case 3:
 			printArray(a, n);
 			break;
-		case '4':
+		case 4:
 			printRange(a, n);
 			break;
-		case '5':
+		case 5:
 			arrayOder(a, n);
+			break;
+		default:
+			printf("\nyou have exited the menu\n");
 			break;
 		}
 		getchar();
-	} while (x > '0' && x < '6');
-
+	} while ((char)(x + '0') > '0' && (char)(x + '0') < '6');
+	// ep sang kieu (char) de xu ly truong hop nhap cac so khac (1....5)
 	return 0;
 }
+
